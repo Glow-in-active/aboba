@@ -17,3 +17,12 @@ class Contact:
             self.phonenumber = "No Data"
         if len(self.email) < 2:
             self.email = "No Data"
+
+
+directory = input("Input file directory: ")
+f = open(directory, encoding="utf-8")
+Database = []
+print("Contacts loading started")
+for i in f:
+    Database.append(Contact(i))
+print("Contacts loading finished")
