@@ -72,3 +72,40 @@ while True:
             if i.email=="No Data" and i.phonenumber=="No Data":
                 print(i.surname, i.name, i.patronymic, i.phonenumber, i.email)
         print()
+    if command==6:
+        name = input("Enter name ").strip().split()
+        conindex=0
+        for i in Database:
+            if len(name) > 0:
+                if name[0]==i.name or name[0]==i.surname or name[0]==i.patronymic:
+                    if len(name)==1:
+                        break
+                    else:
+                        if name[1]==i.name or name[1]==i.surname or name[1]==i.patronymic:
+                            if len(name)==2:
+                                break
+                            else:
+                                if name[1]==i.name or name[1]==i.surname or name[1]==i.patronymic:
+                                    break
+            conindex=conindex+1
+        print("if you want to edit contact")
+        print(Database[conindex].surname, Database[conindex].name, Database[conindex].surname, Database[conindex].phonenumber, Database[conindex].email)
+        contactinfo=input("Enter new contact data else press enter and refine you request ")
+        if len(contactinfo)>3:
+            contactinfo = contactinfo.split(',')
+            Database[conindex].personaldata = contactinfo[0].split()
+            Database[conindex].phonenumber = contactinfo[1].strip()
+            Database[conindex].email = contactinfo[2].strip()
+            Database[conindex].surname = Database[conindex].personaldata[0].strip()
+            try:
+                Database[conindex].name = Database[conindex].personaldata[1].strip()
+            except:
+                Database[conindex].name = "No Data"
+            try:
+                Database[conindex].patronymic = Database[conindex].personaldata[2].strip()
+            except:
+                Database[conindex].patronymic = "No Data"
+            if len(Database[conindex].phonenumber) < 2:
+                Database[conindex].phonenumber = "No Data"
+            if len(Database[conindex].email) < 2:
+                Database[conindex].email = "No Data"
