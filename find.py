@@ -62,3 +62,13 @@ while True:
                                 if name[1]==i.name or name[1]==i.surname or name[1]==i.patronymic:
                                     print(i.surname, i.name, i.patronymic, i.phonenumber, i.email)
         print()
+    if command==4:
+        for i in Database:
+            if i.email=="No Data" or i.phonenumber=="No Data":
+                print(i.surname, i.name, i.patronymic, i.phonenumber, i.email)
+        print()
+    if command==5:
+        for i in Database:
+            if i.email=="No Data" and i.phonenumber=="No Data":
+                print(i.surname, i.name, i.patronymic, i.phonenumber, i.email)
+        print()
