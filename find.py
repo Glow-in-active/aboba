@@ -34,6 +34,8 @@ while True:
     print("4 - Search for all contacts that you do not have detected email or phone")
     print("5 - Search for all contacts that you do not have detected email and phone")
     print("6 - Edit contact")
+    print("7 - Search for all contacts that you do not have detected email")
+    print("8 - Search for all contacts that you do not have detected phone")
     command = int(input())
     if command == 1:
         number = input("Enter phone number ")
@@ -109,3 +111,14 @@ while True:
                 Database[conindex].phonenumber = "No Data"
             if len(Database[conindex].email) < 2:
                 Database[conindex].email = "No Data"
+    if command==7:
+        for i in Database:
+            if i.email=="No Data":
+                print(i.surname, i.name, i.patronymic, i.phonenumber, i.email)
+        print()
+    if command==8:
+        for i in Database:
+            if i.phonenumber=="No Data":
+                print(i.surname, i.name, i.patronymic, i.phonenumber, i.email)
+        print()
+
