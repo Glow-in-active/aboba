@@ -24,7 +24,14 @@ def _sum(array):
         sum_ += i
     return sum_
 
-print(_min([1, 2, 33, 4]))
-print(_max([1, 2, 33, 4]))
-print(_sum([1, 2, 33, 4]))
-print(_mult([1, 2, 1, 4]))
+f = open("data.txt")
+array_str = f.readline().split()
+array_int = []
+
+for i in array_str:
+    array_int.append(int(i))
+
+print("Минимальное:", _min(array_int))
+print("Максимальное:" ,_max(array_int))
+print("Сумма:", _sum(array_int))
+print("Произведение:", _mult(array_int))
