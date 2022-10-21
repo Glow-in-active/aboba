@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=TZ2)
+![example workflow](https://github.com/tum4uk5/aboba/actions/workflows/main.yml/badge.svg?branch=TZ2)
 # Техническое задание 3
 Приложените для поиска максимального, минимального элемента в массиве значений, а также суммы и произведения всех элементов.
 Для входных даннных необходимо создать файл ``data.txt``. 
