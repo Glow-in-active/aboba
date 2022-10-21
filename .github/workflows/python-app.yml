@@ -8,6 +8,8 @@ on:
     branches: [ "main", "TZ2" ]
   pull_request:
     branches: [ "main", "TZ2" ]
+    
+  workflow_dispatch:
 
 permissions:
   contents: read
