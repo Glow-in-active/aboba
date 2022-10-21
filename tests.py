@@ -1,3 +1,5 @@
+import time
+
 import main
 
 def test_min_func():
@@ -20,3 +22,72 @@ def test_mult_func():
     assert main._mult([3,-4,1]) == -12
     assert main._mult([3,-4,-1]) == 12
     assert main._mult([3,0,-1]) == 0
+
+def test_timerun():
+    time_start = time.time()
+    f = open("10000.txt")
+    array_str = f.readline().split()
+    array_int = []
+
+    for i in array_str:
+        array_int.append(int(i))
+
+    main._min(array_int)
+    main._max(array_int)
+    main._sum(array_int)
+    main._mult(array_int)
+    f.close()
+    time_stop = time.time()
+    assert time_stop-time_start < 1
+    print("10000:", time_stop-time_start)
+
+    time_start = time.time()
+    f = open("15000.txt")
+    array_str = f.readline().split()
+    array_int = []
+
+    for i in array_str:
+        array_int.append(int(i))
+
+    main._min(array_int)
+    main._max(array_int)
+    main._sum(array_int)
+    main._mult(array_int)
+    f.close()
+    time_stop = time.time()
+    assert time_stop - time_start < 1
+    print("15000:", time_stop - time_start)
+
+    time_start = time.time()
+    f = open("20000.txt")
+    array_str = f.readline().split()
+    array_int = []
+
+    for i in array_str:
+        array_int.append(int(i))
+
+    main._min(array_int)
+    main._max(array_int)
+    main._sum(array_int)
+    main._mult(array_int)
+    f.close()
+    time_stop = time.time()
+    assert time_stop - time_start < 1
+    print("20000:", time_stop - time_start)
+
+    time_start = time.time()
+    f = open("25000.txt")
+    array_str = f.readline().split()
+    array_int = []
+
+    for i in array_str:
+        array_int.append(int(i))
+
+    main._min(array_int)
+    main._max(array_int)
+    main._sum(array_int)
+    main._mult(array_int)
+    f.close()
+    time_stop = time.time()
+    assert time_stop - time_start < 1
+    print("25000:", time_stop - time_start)

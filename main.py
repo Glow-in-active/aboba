@@ -35,3 +35,28 @@ print("Минимальное:", _min(array_int))
 print("Максимальное:" ,_max(array_int))
 print("Сумма:", _sum(array_int))
 print("Произведение:", _mult(array_int))
+f.close()
+
+# f = open("10000.txt", "w")
+# stri = ""
+# for i in range(1, 10001):
+#     stri += str(i) + " "
+# f.write(stri)
+#
+# f = open("15000.txt", "w")
+# stri = ""
+# for i in range(1, 15001):
+#     stri += str(i) + " "
+# f.write(stri)
+#
+# f = open("20000.txt", "w")
+# stri = ""
+# for i in range(1, 20001):
+#     stri += str(i) + " "
+# f.write(stri)
+#
+# f = open("25000.txt", "w")
+# stri = ""
+# for i in range(1, 25001):
+#     stri += str(i) + " "
+# f.write(stri)
